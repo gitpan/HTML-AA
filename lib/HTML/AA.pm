@@ -1,4 +1,4 @@
-package WWW::AA;
+package HTML::AA;
 
 use 5.008008;
 use strict;
@@ -10,7 +10,7 @@ our @ISA = qw(Exporter);
 our %EXPORT_TAGS = ( 'all' => [ qw( ) ] );
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw( );
-our $VERSION = '0.06';
+our $VERSION = '0.10';
 #-------------------------------------------------------------------------------
 # Module declaration
 #-------------------------------------------------------------------------------
@@ -610,15 +610,15 @@ __END__
 
 =head1 NAME
 
-WWW::AA - The function to undergo plastic operation on the
+HTML::AA - The function to undergo plastic operation on the
 character string displayed in a browser is possessed though it
 is a MS P Gothic font of 12 points
 
 =head1 SYNOPSIS
 
-  use WWW::AA;
+  use HTML::AA;
 
-  my $aart = new WWW::AA;
+  my $aart = new HTML::AA;
   $aart -> code('euc');
   my $dot;
   my $str = 'Character string';
@@ -626,7 +626,7 @@ is a MS P Gothic font of 12 points
 
   print  "Content-type: text/html; charset=EUC-JP\n\n";
   print  "<body>\n";
-  print  "WWW::AA Sample of usage<br>\n";
+  print  "HTML::AA Sample of usage<br>\n";
 
   $dot = $aart -> calcu($str);
   printf "Number of dots of [%s] %d<br>\n", $str, $dot;
@@ -648,7 +648,7 @@ is a MS P Gothic font of 12 points
 
 =head1 DESCRIPTION
 
-  WWW::AA Sample of usage
+  HTML::AA Sample of usage
   Number of dots of [Character string] 111
   |Character string@@@@@@@@@@@@@@@@@@@@@. |
   |Character string. @@@@@@@@@@@@@@@@@@@@@|
@@ -668,7 +668,7 @@ is a MS P Gothic font of 12 points
   Please replace "@" with \xa1\xa1 of EUC-JP.
 
   The explanation of Japanese is here. 
-  http://penlabo.oh.land.to/WWW-AA.html
+  http://penlabo.oh.land.to/HTML-AA.html
 
 =head2 EXPORT
 
